@@ -1,56 +1,116 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     font-size: x-large;
-    margin: 50px
+    margin: 50px;
+    color: #000000;
 }
 
+ 
 #container {
     display: grid;
-    grid-template-columns: repeat(30, 1fr); 
-    width: 85%;
-    height: 85%;
-    margin: auto; 
+    /* grid-template-columns: repeat(30, 1fr); 
+    grid-template-rows: repeat(30, 1fr); */
+    margin: auto auto 50px; 
+    background-image: url(./images/12x12.png);
+    background-size: 100%;
+    background-position: center;
 } 
 
-
 #container div {
-    border: 0.5px solid rgb(0, 0, 0);
-    width: 2.5vw;
-    height: 2.5vw;
-    background-color: rgb(255, 255, 255, 0);
-    padding : 3%;
-    color: rgba(255, 255, 255, 0);
-    transition: background-color 300s;
-
+    border: 0.5px solid rgba(0, 0, 0, 0.257);
 }
 
-#container {
-    background-image: url(./images/12x12.png);
-    background-size: cover;
+.btnflex {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
 }
 
-#container div:hover {
-    background-color: red;
-    transition: 0s;
+#resetbtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000000;
+    border: transparent ;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-#container div.transparent {
-    background-color: transparent; /* Transparent background */
+#chaser {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2600ff;
+    border: transparent ;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-#reset-button {
+#evader{
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #ff0000;
-    border: solid 2px rgb(225, 21, 21) ;
+    border: transparent ;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
-#reset-button:hover {
+
+#eraser {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
     background-color: #ffffff;
-    border : solid 2px black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#resetbtn:hover,
+#chaser:hover,
+#evader:hover,
+#erase:hover {
+    background-color: #ffffff;
+    border : transparent;
     color : black;
+}
+
+
+ #container {
+    display: grid;
+    grid-template-columns: repeat(30, 20px);
+    grid-template-rows: repeat(30, 20px);
+    gap: 1px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #ff0000;
+}
+
+.hovered-red{
+    background-color: red;
+}
+
+.hovered-blue {
+    background-color: blue;
+}
+.hovered {
+    background-color: transparent;
 }
