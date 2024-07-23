@@ -7,7 +7,7 @@
   <h3 align="center">WCT</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A drawing tool for coaches and athletes.
     <br />
     <br />
     <a href="https://loicscrn.github.io/wct-drawpad">View Demo</a>
