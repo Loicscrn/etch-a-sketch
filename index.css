@@ -1,3 +1,23 @@
+.logo {
+    width: 120px;
+    margin: 50px 0 20px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 15px 0 15px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.madeby {
+    color : rgb(166, 165, 165);
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -130,22 +150,3 @@ a {
     text-decoration: none;
 }
 
-.logo {
-    width: 120px;
-    margin: 50px 0 20px;
-}
-
-footer {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    padding: 15px 0 15px;
-    background-color: rgb(37, 37, 37);
-    color: white;
-}
-
-.madeby {
-    color : rgb(166, 165, 165);
-}
