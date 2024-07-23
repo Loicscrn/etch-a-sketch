@@ -7,6 +7,9 @@ const gridSize = 30; // Define the grid size (30x30)
 
 let currentClass = 'hovered-red'; // Default hover color
 
+// Global variable to track if drawing mode is active
+let isDrawingModeActive = false;
+
 function createGrid() {
     // Clear any existing content in the container
     container.innerHTML = '';
@@ -26,20 +29,19 @@ function createGrid() {
         // Set the size of the cell
         newDiv.style.width = newDiv.style.height = `${cellSize}px`;
 
-        // Add click event listener to toggle active state
+        // Add event listener for click to toggle drawing mode
         newDiv.addEventListener('click', function() {
-            newDiv.classList.toggle('active');
-        });
-        
-        // Add event listener for mouseenter to change color and keep it
-        newDiv.addEventListener('mouseenter', function() {
-            newDiv.classList.add(currentClass);
+            isDrawingModeActive = !isDrawingModeActive;
         });
 
-        // Add event listener for mouse click to act as eraser
-        newDiv.addEventListener('click', function() {
-            if (currentClass === 'hovered') {
-                newDiv.className = 'cell';
+        // Add event listener for mouseenter to change color if drawing mode is active
+        newDiv.addEventListener('mouseenter', function() {
+            if (isDrawingModeActive) {
+                if (currentClass === 'hovered') {
+                    newDiv.className = 'cell'; // Eraser functionality
+                } else {
+                    newDiv.classList.add(currentClass);
+                }
             }
         });
 
