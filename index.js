@@ -15,7 +15,7 @@ function createGrid() {
     container.innerHTML = '';
 
     // Calculate the size of each cell to ensure the grid is a square
-    const containerSize = Math.min(window.innerWidth, window.innerHeight) * 0.8;
+    const containerSize = Math.min(window.innerWidth, window.innerHeight) * 0.7;
     const cellSize = containerSize / gridSize;
     container.style.width = container.style.height = `${containerSize}px`;
     container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
